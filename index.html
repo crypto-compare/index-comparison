@@ -8,6 +8,7 @@
     <meta content="text/html; charset=us-ascii"
           http-equiv="content-type" />
             <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+
     <style type="text/css">
         body{
             //padding:10px 60px;
@@ -202,6 +203,107 @@
           content: "\2717";
           color: crimson;
         }
+
+
+
+
+
+
+
+button:hover{
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
+}
+
+[tooltip]{
+  //margin:20px 60px;
+  position:relative;
+  display:inline-block;
+  text-decoration: none;
+}
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7) transparent transparent     transparent;
+    z-index: 99;
+    opacity:0;
+}
+
+[tooltip-position='left']::before{
+  left:0%;
+  top:50%;
+  margin-left:-12px;
+  transform:translatey(-50%) rotate(-90deg) 
+}
+[tooltip-position='top']::before{
+  left:50%;
+}
+[tooltip-position='buttom']::before{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+[tooltip-position='right']::before{
+  left:100%;
+  top:50%;
+  margin-left:1px;
+  transform:translatey(-50%) rotate(90deg)
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%)   translateY(-100%);
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+    padding:4px 2px;
+    font-size: 12px;
+    min-width: 200px;
+    border-radius: 5px;
+    pointer-events: none;
+    padding: 4px 4px;
+    z-index:99;
+    opacity:0;
+}
+
+[tooltip-position='left']::after{
+  left:0%;
+  top:50%;
+  margin-left:-8px;
+  transform: translateX(-100%)   translateY(-50%);
+}
+[tooltip-position='top']::after{
+  left:50%;
+}
+[tooltip-position='buttom']::after{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translateY(0%);
+}
+[tooltip-position='right']::after{
+  left:100%;
+  top:50%;
+  margin-left:8px;
+  transform: translateX(0%)   translateY(-50%);
+}
+
+[tooltip]:hover::after,[tooltip]:hover::before {
+   opacity:1
+}
+
+.input{
+  margin-left:135px
+}
+
+
+
     </style>
 
     <title></title>
@@ -214,7 +316,6 @@
 <td><p><span class="tick"><span class="tick">&#10004;</span></span></p></td>
 <td><p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p></td>
  -->
-
     <div class="container">
 
   <table>
@@ -488,7 +589,7 @@
                     <p>Monthly or<br>individual asset &gt;25%</p>
                 </td>
                 <td>
-                    <p>Every two Months</p>
+                    <p>Every Two Months</p>
                 </td>
                 <td>
                     <p>Active Management</p>
@@ -520,8 +621,10 @@
                     <p>0.5% Exit fee</p>
                 </td>
                 <td>
-                    <p>5% Purchase Fee</p>
-                    <p>50% Trading Bot Profits</p>
+                    <p>
+                        <a href="javascript:;" tooltip="via /faq/: 5% service costs fee">5% Purcahse Fee<sup>*</sup></a>
+                        <a href="javascript:;" tooltip="White Paper: 50% of all profit made by smart trading software is distributed monthly in aggregate to all TRIA token holders">50% Trading Bot Profits<sup>*</sup></a>
+                    </p>
                 </td>
 
 
@@ -547,7 +650,7 @@
                 </td>
 
                 <td >
-                    <p>$25,000 US</p>
+                    <p>$25,000, US Only</p>
                 </td>
 
                 <td>
