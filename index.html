@@ -14,9 +14,11 @@
             //padding:10px 60px;
             font-family: 'Work Sans', sans-serif;
             font-size:14.5px;
+            //text-shadow: 1px 2px rgba(0,0,0,1);
             //line-height:120%;
             background: url('https://static.crypto20.com/images/HexBG44bu.jpg') repeat;
             background-size:cover;
+            background-attachment: fixed;
             padding:0;
             //overflow:hidden;
             margin:0;
@@ -81,7 +83,7 @@
             //padding:50px;
         }
         td{
-                padding:11px 20px 6px 20px;
+                padding:10px 20px 5px 20px;
                 //border-bottom:1px solid #e9e9e9;
                 border-right:3px solid #000;
                 color:#fff;
@@ -323,22 +325,29 @@ button:hover{
                 <tr>
                     <td width="compare">
                         <b>Crypto Index Fund Comparison</b>
+                        <br>
+                        <small style="font-size:8px; color:rgba(255,255,255,0.7)">This information is <u>not</u> guaranteed. Do your own research.</small>
                     </td>
 
                     <td class="c20 fund" style="background:rgba(0,0,0,0.3);">
                         <p>
-                            <a href="https://crypto20.com/en/" class="link"><img src="https://static.crypto20.com/images/logo_white.png" style="width:180px;"></a>
-                            <a href="https://static.crypto20.com/pdf/c20-whitepaper.pdf">
-                                <small style="font-size:10px;color:#ddd;">White Paper</small>
-                            </a>
+                            <a href="https://crypto20.com/en/" class="link"><img src="https://static.crypto20.com/images/logo_white.png" target="_blank" style="width:180px;"></a>
+                            <br>
+                            <small style="font-size:10px;color:#ddd;">
+                                <a href="https://crypto20.com/" target="_blank">Site</a>
+                                /
+                                <a href="https://static.crypto20.com/pdf/c20-whitepaper.pdf" target="_blank">White Paper</a>
+                            </small>
                         </p>
                     </td>
 
                     <td class="fund">
                         <p>
-                            <a href="https://www.bitwiseinvestments.com/" class="link">HOLD10</a>
+                            <a href="https://www.bitwiseinvestments.com/" class="link" target="_blank">HOLD10</a>
                             <br>
                             <small style="font-size:10px;color:#ddd;">
+                                <a href="https://www.bitwiseinvestments.com/" target="_blank">Site</a>
+                                /
                                 <strike>White Paper</strike>
                                 <a href="https://www.google.com/search?q=white+paper+site%3Ahttps%3A%2F%2Fwww.bitwiseinvestments.com" target="_blank"><sup>1</sup>
                                 </a>
@@ -348,11 +357,15 @@ button:hover{
 
                     <td class="fund"">
                         <p>
-                            <a href="https://www.iconomi.net/dashboard/#/daa/BLX" class="link">Iconomi - BLX</a>
+                            <a href="https://www.iconomi.net/dashboard/#/daa/BLX" class="link" target="_blank">Iconomi - BLX</a>
                             
                             <br>
-                            <small style="font-size:10px;color:#ddd;"><strike>White Paper</strike></small>
-                            <a href="https://www.google.com/search?q=white+paper+site%3Ahttps%3A%2F%2Fwww.iconomi.net" target="_blank"><sup>1</sup></a>
+                            <small style="font-size:10px;color:#ddd;">
+                                <a href="https://www.iconomi.net/dashboard/#/daa/BLX" target="_blank">Site</a>
+                                /
+                                <strike>White Paper</strike>
+                                <a href="https://www.google.com/search?q=white+paper+site%3Ahttps%3A%2F%2Fwww.iconomi.net" target="_blank"><sup>1</sup></a>
+                            </small>
                         </p>
                     </td>
 
@@ -362,9 +375,9 @@ button:hover{
                             <br>
                             <img src="" style="width:180px;">
                             <small style="font-size:10px;color:#ddd;">
-                                <a href="https://triaconta.com/">Site</a>
+                                <a href="https://triaconta.com/" target="_blank">Site</a>
                                 /
-                                <a href="https://triaconta.com/whitepaper/">2 x White Papers</a>
+                                <a href="https://triaconta.com/whitepaper/" target="_blank">2 x White Papers</a>
                             </small>
                         </p>
                     </td>
@@ -376,7 +389,7 @@ button:hover{
 
                             <a href="https://www.taas.fund">Site</a>
                              / 
-                            <a href="https://static1.squarespace.com/static/597b4c7bc534a512fc86b5e5/t/59d4e80f46c3c43a9b25e28c/1507125267552/TaaS+Whitepaper+v.1.0.pdf">
+                            <a href="https://static1.squarespace.com/static/597b4c7bc534a512fc86b5e5/t/59d4e80f46c3c43a9b25e28c/1507125267552/TaaS+Whitepaper+v.1.0.pdf" target="_blank">
                                 White Paper
                             </a>
                             </small>
@@ -442,7 +455,6 @@ button:hover{
                         Unknown
                         <br>
                         <small>Active Management</small>
-
                         <a href="https://static1.squarespace.com/static/597b4c7bc534a512fc86b5e5/t/59d4e80f46c3c43a9b25e28c/1507125267552/TaaS+Whitepaper+v.1.0.pdf" target="_blank"><sup>1</sup></a>
                         <a href="https://ca.taas.fund/wallets/dashboard" target="_blank"><sup>2a</sup></a>
                         <a href="https://ca.taas.fund/wallets/dashboard?history_date=12.12.2017" target="_blank"><sup>2b</sup></a>
@@ -629,7 +641,8 @@ button:hover{
 
 
                 <td>
-                    <p>~25% P/A</p>
+                    <p><a href="javascript:;" tooltip="Implied by omission: A smart contract allows token owners to collect 50% of quarterly profits.
+To grow capital pool without attracting additional investment, 25% of profits is reinvested back into the fund. ">25% P/A<sup>*</sup></a></p>
                 </td>
 
                 <td>
@@ -789,7 +802,7 @@ button:hover{
  -->
             <tr class="text-center">
                 <td class="left">
-                    <p>Public Website NAV Performance</p>
+                    <p>Public Website NAV Performance Chart</p>
                 </td>
 
                 <td class="gold">
@@ -818,7 +831,7 @@ button:hover{
 
             <tr class="text-center">
                 <td class="left">
-                    <p>Public&nbsp;Website&nbsp;Asset&nbsp;Distribution</p>
+                    <p>Public&nbsp;Website&nbsp;Asset&nbsp;Distribution Chart</p>
                 </td>
 
                 <td class="gold2">
@@ -884,7 +897,8 @@ button:hover{
                 </td>
 
                 <td class="gold2">
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://crypto20.com/en/portal/performance/" target="_blank"><sup>1</sup></a>
                 </td>
                 <td>
                     <p><span class="question">?</span></p>
@@ -906,69 +920,6 @@ button:hover{
                 </td>
 
             </tr>
-
-
-            <tr class="text-center">
-                <td class="left">
-                    <p>Third Party Financial & Smart Contract Audits</p>
-                </td>
-
-                <td class="gold">
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-                <td>
-                    <p><span class="question">?</span></p>
-                </td>
-
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-            </tr>
-
-
-            <tr class="text-center">
-                <td class="left">
-                    <p>Ethical / Legal / Value Exclusions</p>
-                </td>
-
-                <td class="gold2">
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
-                </td>
-                <td>
-                    <p><span class="question">?</span></p>
-                </td>
-
-
-                <td>
-                    <p><span class="question">?</span></p>
-                </td>
-
-            </tr>
-
 
             <tr class="text-center">
                 <td class="left">
@@ -1031,39 +982,114 @@ button:hover{
                 </td>
             </tr>
 
+            <tr class="text-center" style="border-bottom:none !important">
+                <td class="left" style="border-bottom:none !important;">
+                    <p>Financial Statements</p>
+                </td>
+
+                <td class="gold2">
+                    <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://static.crypto20.com/pdf/CRYPTO20-reporting-requirements.pdf" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=financial+statements+site%3Ahttps%3A%2F%2Fwww.iconomi.net" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=financial+statements+site%3Ahttps%3A%2F%2Ftriaconta.com" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.taas.fund/media-exposure/taas-payout-report" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=financial+statements+site%3Ahttps%3A%2F%2Fwww.bittwenty.com" target="_blank"><sup>1</sup></a>
+                </td>
+            </tr>
 
             <tr class="text-center">
                 <td class="left">
-                    <p>Anti Front Running</p>
+                    <p>Slippage and Trade Volume Accounted For</p>
+                </td>
+
+                <td class="gold">
+                    <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://static.crypto20.com/pdf/c20-whitepaper.pdf" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=slippage+site%3Ahttps%3A%2F%2Fwww.bitwiseinvestments.com" target="_blank"><sup>1</sup></a>
+                </td>
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=slippage+site%3Ahttps%3A%2F%2Fwww.iconomi.net" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=slippage+site%3Ahttps%3A%2F%2Ftriaconta.com" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=slippage+site%3Ahttps%3A%2F%2Fwww.taas.fund" target="_blank"><sup>1</sup></a>
+                </td>
+
+                <td>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=slippage+site%3Ahttps%3A%2F%2Fwww.bittwenty.com" target="_blank"><sup>1</sup></a>
+                </td>
+            </tr>
+
+            <tr class="text-center">
+                <td class="left">
+                    <p>Third Party Financial & Smart Contract Audits</p>
                 </td>
 
                 <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
+
                 <td>
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
                 <td>
-                    <p><span class="question">?</span></p>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">&nbsp;
+                    <a href="https://www.google.com/search?q=audit+site%3Ahttps%3A%2F%2Fwww.iconomi.net" target="_blank"><sup>1</sup></a>
                 </td>
 
                 <td>
-                    <p><span class="question">?</span></p>
-                </td>
-                <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <span class="question">?</span>&nbsp;
+                    <a href="https://www.google.com/search?q=audit+site%3Ahttps%3A%2F%2Ftriaconta.com" target="_blank"><sup>1</sup></a>
                 </td>
 
+                <td>
+                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
+                </td>
 
                 <td>
-                    <p><span class="question">?</span></p>
+                    <img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);">
+                    &nbsp;
+                    <a href="https://www.google.com/search?q=audit+site%3Ahttps%3A%2F%2Fwww.bittwenty.com" target="_blank"><sup>1</sup></a>
                 </td>
+
             </tr>
 
-
-            <tr class="text-center" style="border-bottom:none !important">
-                <td class="left" style="border-bottom:none !important;">
-                    <p>Financial Statements</p>
+            <tr class="text-center">
+                <td class="left">
+                    <p>Ethical, Legal, and Value Exclusions</p>
                 </td>
 
                 <td class="gold2">
@@ -1073,23 +1099,23 @@ button:hover{
                 <td>
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
-
                 <td>
-                    <p><span class="question">?</span></p>
+                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
 
                 <td>
-                    <p><span class="question">?</span></p>
+                    <a href="javascript:;" tooltip="BitConnect listed in Wallet Addresses"><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></a>&nbsp;
+                    <a href="https://triaconta.com/wallet-addresses/" target="_blank"><sup>1</sup></a>
+                </td>
+                <td>
+                    <a href="javascript:;" tooltip="Has held BitConnect (BCC) in the past"><span class="question">?</span> <sup>*</sup></a>
+                </td>
+                <td>
+                    <a href="javascript:;" tooltip="No known exclusions"><span class="question">?</span> <sup>*</sup></a>
                 </td>
 
-                <td>
-                    <p><span class="question">?</span></p>
-                </td>
-
-                <td>
-                    <p><span class="question">?</span></p>
-                </td>
             </tr>
+
 
             <tr class="text-center" style="border-bottom:none !important">
                 <td class="left" style="border-bottom:none !important;">
@@ -1097,37 +1123,47 @@ button:hover{
                 </td>
 
                 <td class="gold2">
+                    <!-- Crypto 20 -->
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <a href="https://crypto20.com/en/portal/performance/" target="_blank"><sup>1</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>2</sup></a>
                 </td>
 
                 <td>
+                    <!-- HOLD10 -->
                     <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <a href="https://www.bitwiseinvestments.com/" target="_blank"><sup>1</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>2</sup></a>
                 </td>
-
                 <td>
+                    <!-- Iconomi BLX -->
                     <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <a href="https://coinmarketcap.com/currencies/blockchain-index/" target="_blank"><sup>1</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>2</sup></a>
                 </td>
-
                 <td>
-                    <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <!-- Combicoin -->
+                    <p><a href="javascript:;" tooltip="Unknown: Conflicting information between reported NAV, investor updates, investment procedures (dilution)."><span class="question">?</span> <sup>*</sup></a></p>
+                    <a href="https://triaconta.com/" target="_blank"><sup>1</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>2</sup></a>
                 </td>
-
                 <td>
+                    <!-- Taas -->
                     <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <a href="https://ca.taas.fund/wallets/dashboard" target="_blank"><sup>1</sup></a>
+                    <a href="https://ca.taas.fund/wallets/dashboard?history_date=25.05.2017" target="_blank"><sup>2</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>3</sup></a>
                 </td>
-
                 <td>
+                    <!-- Bittwenty -->
                     <p><img src="https://image.flaticon.com/icons/svg/594/594864.svg" style="width:10px; transform:scale(2.0);"></p>
+                    <a href="http://www.bittwenty.com/" target="_blank"><sup>1</sup></a>
+                    <a href="https://coinmarketcap.com/charts/" target="_blank"><sup>2</sup></a>
                 </td>
             </tr>
         </tbody>
     </table>
 
     </div>
-
-    <!-- <div style="color:rgba(255,255,255,0.5);font-family:arial;padding-top:20px;font-size:12px;text-align:center; font-weight:bold;">
-            <p>This is not an official release. It has been prepared by C20 community members for educational and informational purposes ONLY. It may unintentional contain mistakes. The statements contained herein do not constitute investment advice of any kind, do your own research and due diligence.</p>
-            <p>Due to insufficient public data/information, questions that cannot verified and are shown with a question mark.</p>
-    </div> -->
 </body>
 </html>
