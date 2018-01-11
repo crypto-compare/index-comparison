@@ -106,14 +106,24 @@
         font-weight:bold;
             
         }
-
-
-        .gold2{
-            background:rgba(0,0,0,0.3);
-        }
         .gold{
-            background:rgba(0,0,0,0.3);
+            background:rgba(0,0,0,0.5);
+            //-webkit-animation: glow linear 5s infinite; 
+            //animation: glow linear 5s infinite;
         }
+/*
+
+        @-webkit-keyframes glow { 
+            0% { background-color:rgba(0,255,0,0.1); }
+            50% { background-color:rgba(255,255,0,0.1); }
+            100% { background-color:rgba(0,255,255,0.1); } 
+        } 
+        @keyframes glow { 
+            0% { background-color:rgba(0,255,0,0.1); }
+            50% { background-color:rgba(255,255,0,0.1); }
+            100% { background-color:rgba(0,255,255,0.1); } 
+        }
+*/
         
         .tick {
             display: inline-block;
@@ -298,9 +308,6 @@ button:hover{
 .input{
   margin-left:135px
 }
-
-
-
     </style>
 
     <title></title>
@@ -321,12 +328,14 @@ button:hover{
                     <td width="compare">
                         <b>Crypto Index Fund Comparison</b>
                         <br>
-                        <small style="font-size:8px; color:rgba(255,255,255,0.7)">This information is <u>not</u> guaranteed. Do your own research.</small>
+                        <small style="font-size:8px; color:rgba(255,255,255,0.7)">
+                            This information is <u>not</u> guaranteed. Do your own research. 
+                        </small>
                     </td>
 
-                    <td class="c20 fund" style="background:rgba(0,0,0,0.3);">
+                    <td class="gold  fund" style="background:rgba(0,0,0,0.3);">
                         <p>
-                            <a href="https://crypto20.com/en/" class="link"><img src="https://static.crypto20.com/images/logo_white.png" target="_blank" style="width:180px;"></a>
+                            <a href="https://crypto20.com/en/" class="link"><img style="width:180px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR4AAAA2CAYAAAARQfY5AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAACAASURBVHic7V13fFTV8v+e7SmkkYRACAkQeovUUA2gFBsgqAiIiEh5iHSkyI8gqEgoysNHVVCRqgJKCTykhmcUMAuiARIghARCID3Zfu/8/ti7YbN7d7ObLIrK9/O5kD11zi1z5syZmcOICA8CjLHwEAXm3DVgBhHpHkgnj/AIj/CXBHsQjIcx1jsuJuSDyVNiYzp3rPvz2bPZHz/9yt5dHu/IdXrcrkNEMQDiADwOIMAq6wSAPYwxtZN6AwEcZ4wdd7vjR/jHgogCYH53Bgj/26IQgBqVvIMPkK42AGJs6LHQkuFuox67AASG+0o2zBjThrJTJxAZ5xEVzCLtral09eyYM99uePo5T/bnBl3u3I9RRJRCleMYEcXZ1N1kyczMzPzIrY4f4R8NIornOK7Q8v5oNBrtlStXrl+5cuW6RqPRuvoOepimKOt32urdTi0qKrpbLVo8+HEP7tuxVuZ3Xw4g0s4lKnqbp9zpPN2bwVP+TKKit6kseypdOfP60S0f9+ntqX5dpM2V+xBDIgzn1KlTKXPmzNk+duzYzWPHjt08Z86c7SkpKalWReKF+hUe0JYtW95x/1E/wj8NwsedYv2+DRw4cC2A2QBGCdfs2NjYj3bu3HncARM6RmapxJN0TbHuQKPRaDds2JBYr169JQJNU8aOHbs5Kyvrtg0tu12ixQMfdVj9IPlX899sR3fTJhLp5xLlTjcznbszeLo3gyhvJk95M3kqnEVUPJuKs6bQ78mjv1+z+PFOD5LhWNFY2T0YZTKZiqzvXlZW1u3Y2NiPYBYxmwKIEq6mAIaOHTt2s9VLcMz2Tfjmm29GVvGZP8I/BEQUY5Fyrly5ct3qfQsTKR4AIK5r164finzsJLQTI1KvKnRtsmU6Q4YM+RhALACVVdGo6OjoqVeuXLluQ0tGpbRU84N+5emude78d+fzRNo5RPkzecqZJjCd6WamY2Y8RPkzzfkFs3gqepuoZDYV3pxCF5JGbftgZueWfxbjIfPSqgKysrJuR0dHT0VF3Y4toiIjI+PFXgIiokOHDg116Sk/wj8SRBRgNBozicxSDsxShCtSS0B0dPRUsfdOmDyrxXxsmQ4R0YQJE9ZDnBkCgKpx48b/ysvLKxChJcpZR1X5kOs1ClV+++7UjlR0fRKRZraZ4dyZxtMdB9JO/kyigllmxlMoXCWziUpmU17GZNPZYyPXvfVKywZ/JOMhooG2N1mj0WgFpqNyWNHqpvfq1WuemPj7iPE8gjOYTKYTVkxHTJHsDKoRI0YsFpvwKv3gnYCIVtq2J9BXWXuqhQsXfmpb12g0XiAHyy6Ju8R5MzZuSO965z9d/9yg+e/1hp+vglCov1+ACZflX4CBWf19Px3gCeAJQcHe0rbt6ox9591eF386MmL5sD5Rtd2ly10QUZTJZPrCNn3dunX70tPT1wBwxQRAd/To0U+mT5/+pecpfIS/K4hooFQq7ZGdnZ3TvXv3hQD2uNmEbsuWLauTkpLsdrWkUqmfwWBw+30ks2J4im368uXL1wDIqIyeBQsWJKSlpVUoJ5PJWun1+kViFVxmPIyxJq3r+SYunttl7RebBgZ079WAUKglmHhAwgR2YvmHMQJgIvqUI0ogQHu/ofJ/7zMgjidGRCGhPl4dOtadtnLNs78lHRgWX99bGugqfe7CYDB8KZPJalinZWdn50ydOvU9uMZ0LChcs2bN+2q1+pJnKXyEvys0Gs0HALBixYptcJ/pWJCzY8cOu4kTABQKRTciGuVOY0aj0Y5ZqdXqS3v27NnpYhOXTp48+YNtolKpfJNEdrtcYjx+jE0d3r/+L5+ue7bvtLnd4aWQAiV6BjALAzFfgmzDEzJ1Jv55WfCyMdKaCbN0HLXigA0EmO63ygCAhMsME08SgGrVrhHYuWvEgqSU8b8d2/vSNMaYl4uDdwlENEqhUHSzTd+3b99hmO0k3EXGvHnz/lN9yh7h7w4iivH29m6alpaWsWLFilXVaWv16tXb8vPzC8Xy9Hr9e27QFC+Xy+vapv/666/HYbbVcQlbt279XCy9rKzsA9s0p4yHMda6XUO/kx/Ed1+xacNz3h06RwAFOgJHBFbONMgiuxAAI08bbhfr23iFLd9taccrOOGqNHDpWB1HbTjCV1ZaF3HLPhNPUsYQXs+/dtfukcszf5twMXH782MZY24vDW1BRAEmk8nugWu1Wt348eNXVrXdAwcOfCkm+j7CI1gjNzd3BABcuHDhR1S+hKkMOenp6VfEMpRKZR0ickl3ZDQap4ulb968eas7xBw9evSMmOTv4+MTayv1iH7IjDFJqIq9M3pg9NlN657tPnFaZ8gZgBIDgVmpaxjKzYI5IE1r4p+Shy4fG95wlSiX9Kq59HdpwIcjdBy144HdVN6QKAMiGHhSyCSIiPRv0POJBuuuq8eqv/tiQLWUtlqtdoztEgsA1Gr1b6iatGNBoSPR9xEewQKj0dgJAPLy8pI80d69e/cuOsq7efPmoMrqE9EouVzua5uelpaWcfTo0TNukqPLzMz8WSzDVuqxYzyMsU5dmwcmL1kYt2jjJ0/LW8eEkVnKAZWXttLTCFLOqvR7mse8a6846Ap1XkFLf5H4L3leb+K788AhUQZEwj9EBBNPSrkUUQ2DWj3ZJ3pbRsrYI5nnJzzpSl8i45smln7+/Pn/VqU9a6xevXpbdnZ2TnXbeYS/NYIAYNy4cQc80VhWVtY5R3m+vr526gRblJWVzRZLv379+nm4p+sEAFy4cOGIWLog9URZfpczHsaYIjJA9v6bQ5smf/afZzqMHt8BjCNAY2QVdqpYuT4HHHBRa+J7ysNWTG7SfE2Zu0SqgpYmSfyW9DNw1IcHTlZkQFYLMgIDEWDk4KWSIapBYO+Iun5uL4uIKE6lUonumO3fv/9bd9sTQU5SUtIpAKhTp47dmvkRHoHneQlg3lX1RHtRUVH5jvICAwMbOKtLRFE+Pj5NxPIuXbp0vCr0zJ8//79arVaUYeXl5b1s+VsCAArGujzZNvjch/E95/x7RV80bhIM5GsJPJEg1Agwcx8Cg4GjJT/fKG7nHb6ySgRaQxn44X8lfkseN3A0gCf8LNjemBkQCV1aqOCJwPE8Azm84Y6Qn58/USw9Ozs7Z9++fb9WkfwKSEtL+x4ApFJptCfae4S/Jxy9i+6ib9++yVWta80IbPHjjz8erWKzObdu3bollqFQKF6z/M1im/h/0bVj+PC3xneQ1GsSDJTozcKGhJGgwxEuMDAGDjir5+gt74iPfqwiYZXCUDDrZZmEzZbIpa1BRDBw5fSCCCDwAB1DzWVPuNKexTtdr9eXKhQKH9v8c+fO/di+ffsuHiI/DMB4AMeF6xH+4hCUtDEwe2cHwOyRnQGzV7bLuz4AkJmZmRoREdFU+LmQMRbvAfocWskyJ6EZ8vLyzgUFBbW1TddqtTpvb+9AVGGpBQCnT58+1KVLlz4OsgMZY4WS2iHePaa80U5Sr2EQoVBnlizKSb2/Xc4DJiNPC9b+nNXpQTIdAFAELt322Y2ymDNJNz68m13MIBNWhPdvMANgdKdNIooTYzoAoNFoMqtDrw1yAMRDhOkQUbyYtakDpJDZB+yYUK/SHQoS8Rlzgjgn7VRG5zEXytiWP0Zmy9iB5KJDIxEVOGmzOoh3sf9RRHQdwG4AC9LT0+uq1WqZVqsdB2ATz/MZwphcdtC8efOm9bu2gIiuC23EE1EcubkEc6dvW4gxHQAQJJYqx9DSaDTXHeUVFRU9CQAyIj5frzdFwsDdX0lZbzIxgCM6rTPRJJ+oVSkT/yDNxZjWq4m1YUn7vnj27adfbsNQrLcsugDzasskdaO9mzdvDoyIiBDNS0lJqbK46g46dux49oknntjRo0ePyI4dOzYNCgqq8NIkJSWpb9++XVS7dm3/iIgI78DAwLp+fn7BMMcFAhEVwmxwtlAs/sno0aOPdenSRd++ffvIJk2aRHl5eVVw+8jPzy/84Ycfzh85ciRj/fr1dvWt6XzxxRf3vvzyy53Cw8PDrOv//PPPl1auXLk/NDQ0q02bNntjY2MjmzdvHuVoLI0aNapVs2bNMGGWj4NgHUtEmx2Nw4KrV6/mN2zYsLzdXbt2nbAt88ILLzwuNkbrtJiYmMhGjRpFWX6fO3cuCk4gfMy7BXqhVqsvDRgwYG9mZqYa5g8yasOGDf3GjBnTF8AUnudfI6I4V+Lj5OTkXARgLQ1E4b7F8AKNRrMVwPDK2rEgNze3Y2hoqKvFy0FOfLpKSkpEl0qu4tq1axcc5d27d+9xALvwbKfg5LTDLxPdfIunaxN5uv4mTxmTeLoxiecz3yrUZ0yaQX+AB7nY1TJE9vLh7YOIDPOI8gSH03sziL87nbt39c3drrYDAFlZWaccTX9/oF+VCmbv9n579+5NtKVj0aJF78D8sg+EEHpg4MCBa23CcDibtcNg9iAe+s033xyxrfDTTz/9JLQf5QKdMQDGb9iwIZGIaMOGDYkwfyD9YF5uBAhlBlYylqHCWOITEhL22DoTOhgHAPOyxLqg0F6Fy7bfa9eupdmWOXTo0B7rMh9//LGda4AFZLbzOm8pm5KSkiqMwdZ3LzYhIaG8XVcdNHv16tVd5FmWo7S09E5lbVjj0KFDQx21deXKFYeSR3p6+mRH9U6ePLndHRrcoenu3bspAIBnOtY8mXb4Zd7MeN60YjxvUVn6xMlUNadM3/o+6B7tL+kKQCFWpiagig6SLZo0rNmV5f/X7dznK3q/YVumVS358CM7BhHp5xHdm2GO7XNvOlHeDFNx5lu73KAHJSUluY5uBir/ED2Os2fPbralwwEDDAMw1Polt8ImR+2PGDHC0cN3SzS/ffv2CY1Go4WZoVV3LDH169efI+JZfUyMLmvGI9BgB9t+MzMzU23LfPzxxxViyzibaKyZjkaj0TZr1my0o7IAYqwnBReZj+rUqVOVBZqLqqSNcmRmZn7kqJHTp08fclTv999/X+uo3tmzZze72r8DRDlqu6io6C4ASDiejDyhomGg8I9cJtHYtlhLzp4b2ivig8nDm73IGKvdtVlAwqLpsVGW/MgakhEjn6mf8867vY98tOa5vT98PTg9cdugwdZtMMaUUfV9jv7fgp7vzHu/X/KEad3eeaxDxDqu6O2N1uUkDBIJEwwVpcy8B2ck6O7qWOnNMrd0PL6+viFOsjPcaesPRg6A7TNnzoxPTEy0XRKOIiJRs4ItW7YkilmRarXaMa52TERRYWFhPZKSks4B8MRyVH39+vWVcXFxS21M/eOMRqNT40vBwLNKmDx58h5HW7zWIKKVUqm0teX3wYMHT6empjqz3lVbu8pIpVI/vV6/pZJudBMmTFjmyNUBAG7fvv1UZbRaIJFI2jnKu3z5ssNnFhIS0slR3qVLl9Jd7d8BMhxlCKoDSHieDER031bHsonNAMaY3FKBMRbUJtLn2Ly53fZOe7v70FHjOr74xfLep+fN6TFj4vRu3QHgsXDlkwMGNP1y/rt9Ph897eOIp1/eHREc6pfSq3fDr035s163tNW5gc+CNyd26vzKWz0u1YpcMdLL/4OD27f9vkpfZnydK3rbysCPSaRSBnA8mQr0KMkoxe1Lhci6Wkz37mhdZjwuzEJ/Bajnzp27TCR9ioMZslDwtakAk8k01tUOLdutGzZs2OBqHRegS09PX7N169YKxqZyufxZInK4BPrhhx+q6kwJABmVMS7hHlbof8mSJR+hEiXrgQMHvrT2ylYqlS2oEuX1xYsXv5k4ceJGR8amRNTXWX1rBAcHiyqItVqtbvTo0dsc1dNqtQ7Dvnh5eXlys8UORBRlkXhgtYOF+1pmkphzGJ6MCfom4b0n4t5a+MT2jn231n+sx+dDGjWrNe/JJ6MRFKgoAYAO7cNXjH2j/eHox9ZOBFrkAtAOGrhjXXpaHmResnXAe2GMMWW7dnUmvvJaO1BpWflssmfn+WOpv92B1Fs+91bpLB8AkKqkEl2+HtrLxezOtRJ2L1fLynQceMZIKpO4zHiSk5MdGlLZuvI/zEhJSdkvJsWUlpbOEis/cuTIdbYzfY0aNRq5yoh9fHwmpaWlZezatWtv1Sh2CN2kSZNspR4YjcZFJLLkSktLy5g/f35lkoRTLF26dL3lXogZd2o0mgpOlWq1+tKZM2dErXBtUGjrlW00GqeLjcMKuu3bty+Pi4tbumvXrhO298FgMNRyoV8Q0UClUuktlnfw4MHTABxGTPD39w92lOfr62twpf+qIjU1taWE48jEEQmOnqyCPQAJThKP1VG+9OLgFnF9XmypK7tZUD4rxPb/atvB/14v5KWyAABo3CQkumWniOXWbVzL19xNT7sHyKVSQNIZQLuOnSP8pIEq6MoM/7OU+/2e/mp6Wh6g5Wr6ZpR1AwC5TCLRlBihKTOSSVgOEgE8T4wx5vLNKS4uVjjKU6lUf6Wjd3T5+fl2M7fRaHQ0Q6qFZVIFFBcXi5rJW4MEK2/ho3LLVsVFqG0dHOVyua/1UlClUnlrtVrdm2+++QmquRzes2fPznXr1u0D7I07iSjK29t7mHWa4HPk0rtx4cKFClbvtuNwgJz09PQ1L774YnzNmjUXRkZGfjhu3LjPIyMjP6xfv75LBwXk5uY6DK+7e/fujY7ygPtLngcFZxP6zZs3fSUmExmJFzSwFRdcYEIArxbNQ8YPeLYpUGZI9on4qILW/VZO6b/uXMsrAAAvX1XGT0evLZsxqmW8UtAZhcvgy5ssBoAyWT0V2jZrXgsw8byx4stUlJ9VYtSnF0NzT9cOAKRSJhHCbIDnCRxPxBOB44gMRt5liadBgwbNXS37sOP27dt2W7bOTOMPHTpkp6NQqVTPVDIjIz8/f6JWq9U5CnXgCYg5OGq12nJrWo1Goxs5cuT6w4cPO/2IXETh1KlT30tMTEy+du1aBUZaVFQ03rawI58jMaxatep/tlKLi0taHcz2Xh9lZmbGr1+/Pj4zMzMeQKW7SkQUEBoaKuoEmpSUpN6yZUuiC/0/MFQ2oUuIhwkWliN4RVlYj1wp4xhjrFWrWu1DIvzBaU123qrjZ/13W+2mn+wFgIISbl7LVrVaLX6/z4K7WVPaAkBUpE+HwEAvM/eA37mmTQIahtbyAcqMWs0djfXDMmg0RqPeyIMjWPyppDwPcBzPTDyB44SLJ9K7wXg0Gk0dV8s+7HB3/b18+fJvbXUJCoXCp6Sk5AVHdYgoICgoaIharf6tCh7KLkPMwdHaqC0qKuqDr7/++gN4TuJS9+/ff+EzzzxT4cNWKBSv2hacP3++O07Dhbdv375pnSAsaaPcaEMH80TskpSl0+lmiKVrtVrdhAkTluHBSKkeg4RAJiKImFwzwEtuAlA7MjLQF3IpTBzdcNbYOwlJ30rkkmflSum3crlUAQDRjWqOahVTG9CbUoBx12rV8gtBgRFl6cWGtDO5FZgHxxNMPMFk4pWAOTwHCek8R4zjiXE8gecJALnMeIxGo8zVsg87WrdubecD5myHBECOEOCsAjiOczgjW5jS1q1bv0I1LFgrgzMHRwGbYd7V8yQSYRX+hIiivLy8KgQyF5YJbvV7584du7g4znyhqgMiCpBKpZPF8g4ePHj64sWL3zyIfj0Ff39/PwkjGEBk2U63RBU0QyohAAGBgSqACEzGiipr1CtsxT5pzYTBXqHLktvUUbwa27les6AgX+hyNRYFKK8pMUJv4MnbT2HN8BQA5DxP4Mj8spv30gETR8TxRBamw/NEPE8m/APB83xj2zTb2dYWO3fu3GirZA4ICGjvaEaWSCTTs7Ozc1avXu1wV+TvArGt66ro/bRard0WtNFo7FdVupxBr9cvEouhk52dnTN48ODFeICThScgkUhqSjgiA28v71h0PhIAJJObnRMkjLn8sQcrWc3mzUITnukWDc3VonWqhquOAMC9Ql2u1sCBiKQSxsolkSAZ/GQyqVxgLnfM3UNCBMvyyqLnMet6ePwjGU/dunXjbNN27NjhdKtZiAxnp5QW2w0johgfH58mgpT0t48tVFhY2No2LTU19bK77RQUFNgxHl9f32ZVpcsRiChKqVS+KZY3e/bsT/EXcEy+fPnyXQnHkYHjie6rlK2WXXKJHECB0cgDADielK423rhBjS+GPtsyJLSm78/btv9WfqNKSoy/lpYaQGA+fjXuO23WDpHV8/aSgyfAaOTPAzZLrXKGYxbO5DLXmeDfBUQ0ytvbu8JWa1paWsaiRYs+q6SqTswORqFQ2O2KWHa8du7c6QmF7kMPMUO6mjVruq0fCQ0NLbVNq8RotUpwdILExo0bD23ZsmW1p/t7EAgNDS2VGAycyawzEYKvWx9NU2pQAbjDEysBT2Cc/U7I051Cw5/pFPqcdVqT2sp3n+3d5Kk+jzdMz83TPPv6spOmgV3CXhr+ZL1uOqnqwN1iA0dEMuIRbqlTK9inY3CgN0wcX6ozcEkAwBgkRIK0Q4BUwuClkKCGSkI1VK7b8Zw+ffovHwuZiGJsY0VnZ2fnPPPMMwlwYat5/vz5W2x1QQqFwodsTiNQqVTPJCUlqR+kUtkCMXuaPzqCozNDOnewadOm38XS3VQwOwURTRE7pECtVl9644034vEXklAlRhNvIqrokA5B6uG1JiURUfYd7Y+kN0Eil9ht25qMpj49O0ftsPyODJSOfLJbg/kzx3X+yeuxT1rX7fVpLgAE+atmDXmq+ewzv966e+FK3udFpQYwCWtvqRca4js4ItwfBiO/5bHBXxUCZjsixhjkUgYfBWM+Sgm8FRIoZAwGA8fZ0uIITZs2/cs8EDEQURzHcSesY0WnpaVlxMXFLb1y5Upl0o4FGQcOHDhum3j37t1yqYfMp2/4HD9+/Bv8AXoCsWBp6enpoh/wg0JoaGg927ScnBy335ft27eLBl1PTU1tWRW6bEFEUUaj0e6Mqvz8/MJhw4YlwE2XFldcSKoDsftqDQnxMBJEdrUYwPG8DABOn7m1/O7tUsiMfFfbYrVDa0yPaRF2HADqBkjiOretu3lgn8bGMW/vO929uf+swT3qbHipV8TuenUDW7VuFnYXADZ88/vk/CKdWsLYnDaR3uH1/Fl8yyZhrcJCa9woKdXPs7RNgEQlY/BRSKCUM5JJzPyRCMSYZ3Q8ld2gPxINGjRoTuaYLHFkjlsTT0QpAI5JpVI/wMxwxo0b93njxo0XunHwIADgxIkTdv5QISEhPS2zcmFh4cT8/PzC6loJu4rw8PDetmnff//9H7ojI2b5K6avcQGiz+HmzZt2SuCqwGAwfGmrUNZqtbqJEydurMSfTBSOogR6Co4sqgHg3r17xTKeeBORJcCWsKPFmPmQPt5subxp18XDv3z90joUceNu/u+l9u1e2nEWAKJD5cvHDWvbolffx4ZG1pTHtG0RdnjmuM6M43j5C083n+bro4BKKYNCLkUNXyV4wRI6+3ZR6dWDr3VjEvbZjHFdzqSm3Q3rE9don0qleDOm96flW6wyqYTJpMx8PCABJMR+53kiqcR1HU/fvn2Ty4foxg36oxEdHT0fwHyxvMTExOSFCxf+lJycrIZZgZjhbvsbN248NnHixEsxMTFNrdOLiorGE9FaAO23bNmypyptuwuB2VWQeNLS0jKWL1/uidjX1YKYvubPhOD7ZbfEmj59+pfbt29fjipIpwqF4oG6RTjD8OHDf5HxPBnJouKRgCBhgJGHodjEiouN0mBBC9N2yI7x2cdel6lUsuML3njs56s3ChqNfiGm7pCnW0xm9RZerFtr1axhA1pm1q8XkKvRmvKjIgLvmjj+HsdRHs/TPRPH3S0uNZSHLGjYf1MZgJei2swPQ0gkAWPs4pAQkd5iVE1EICEIGANIKmHueKdnaLVanW1grIcNGzduPHTmzJkcAGjUqFFAy5Yta1kChvXr1y/2ySefrCOVSgudBc+qBIUnT57cb8t4FArFq6WlpX6+vr6iUtGDgE6nW61S3X8cVq4Rf+llsadB5siTC2zTly1btnfNmjXvo4r36+bNm5lWIVgroFmzZrFwwXq6KhCWeDkyo4kvX2qZykzQFBtRVmqEXs9Db+Qk1g4d4T0/HSM98cbOgX2bPqfVGc926Vp/O+on/AIAp38vWApgKSCc3+EqQhaJ3rh6fuyxiDo1XvX1VhDHEYjALMyHiEjiHuPBrVu3bjVs2FDUtYCIYlyJHvegwfP8d+vXr7ccexIAcyyeppZod1KptB7M4TIHAHitKjRPnjx544gRI163jhgoGNBNUKvVlzZu3HjME2NxBkGh/bTlt1ar9aRrxN8GwobCFzJZRfvXZcuW7Z05c2Y8qiGZOgtPmpubW+VwqoDzaBCWJZ6MJDCV5Oup6FoJ8vN04Hgy72NLmJg5M8Ie33A4DLCzhPUUGGOscajsnU4xdRa88nwraXRkIOkNJsYLMb2IyBIryC3Gc/Xq1V8dMR7Be/1PZzyCJW+GTXLiG2+8kVy3bl3/fv36WYJxxXAcd4KIHq8C87mkVqvP9+rV63HbjJMnT+7HAzS1F/zDpsBqBrcwHQ+7RrgMMUn4YTiaiIgC9Hr9FqVSWeHwycTExGSB6VTrfXUWntTLy0s0NrmrSE5ObhAbKx437s6dO+kAIJFKmKmgQI/iIiNMvFlrSzDbzWh0f6ypTFQA6xDbyPenYc+1eHfJ7F7Sru3qksHIwezScZ8NEhErcz0cDwDg7t27Zx3lBQcHP+zxepJtY/FIpVI/k8n0XVUaW7t2rV3kwvz8/MLJkyd7TOIQUZSv5Hk+A1ZMJzExMblZs2YfCkznT1liiSlZq3I0kSOn25SUlKyq0MVx3F6lUtnCOi0pKUndv3//hfDAJOnsQMHg4GA763h34Ovr69BpWYg5DQkRGQkgHgSOJ2a2EgaBMSopNYyaPLT5PMaYW6snd8EYkzYLky/sFBOePHditw5vvdoBh6krDgAADPdJREFUSoWUikv1908UBQCYpR2eh6SkzOjWuVojRoz42lGemBtCdSF8cEROTnNwB2KxeGQyWQS5eD62NcTi6xQVFd2Dk/gt7kJQlB8Trt0ApkgkEv+0tLSMjRs3HoqMjPywf//+C2/cuLEEf6JeR0zJqtFo3NYF5ubmdhRLnz17tsMjhh2BiDZJpdIe1mmJiYnJ3bt3Xwizr5knkOHIZkqlUlXLqdoZ4z5x4sQPACDjeDLyPBHHAzyPcn9RjuMQFupb65XnWy/u3LbuWzNGtPz38q9+W0tE96pDlC2iAlhsbGPfT/o/Ht12xKBW8PdVUFGpnhERg1mlw6x2s8DxlMZxNG5LUvax2Ffc6uqSWq2229EBgJCQkA4eG5AAy6kWW7du9dSumSUWTwX6hfOx3Y3OZ7ekkclkHhVvrRXlAJCbm6vbs2dPDsxLyUswz9p/uk9RamrqZUdKVnegVquD+vSpeJSUYLDp1vJRiMI4yjpN0OmsheeYDgDg/Pnz58LDw5+2Ta9urB5HYVXz8/MLV61a9T8AkBEPzsTd94MqBwMMRp68VHLWrlWd0IaRQYvatqozedqwlmtWbvttNRHlVoc4xpi8SS1ZfOe2deeMfL4V69y2Lsq0BpSWGaxNGRnPmw80JbPbxOr8Et3sriN3l60e7LBph/j111+PizGeyo56rQossXCHDx/+i6faFGLxVBi5Uql8KJeJNopywMxkHrodK6PReAnAAOu0sLCwhu624+/v72ebVpnzri0EpXuFGNpWimS3l1dkPgygkDE2VSz/9OnTe5566ik7xiPUjWOMHXe3TwBQKBSiOjK1Wn0eAiOWmHgUAfAyccJSS3BPELzAYTLxVKY1klIpQ7tWdYKHD2o1/9sV/VLnvdbmPcZYlUSy+oGSrl2a1DgzclCruUve7sk6talDRSU6Mhl5YceciBe80YkIxOMyx1OfZoO2Teo6crfbZ7RbIBYK1IKqLFmcITg4uG1Vwis4g1gsHsZYtXYgHhSsFOWW66FjOgBw+PDhkyLJbqsWgoOD7ZxNr169muJqfYHplOvetFqtrjpMR8Co3NzcXo4y33///X2OQqqkp6c7rOcMRBTlSGI6cODATsvfklul2Bcc5D1apzfd4InMLlk8geNR7iPFAMgYSEo8hfgrqVvbOkGvv9B67oF/9//9/8bEfMgYCxfryBYyxpTNays+7NKubtKCyT3aTBzZHjKphEo0BkYEcEJ0QZ4nZtk+53n6+F6Bpm3zQdvcCczkCGohFq0dhCWLR2CJhXv9+vXzlZd2Hbt27bJ7AUNCQh4ay+u/IsSiB4aHh7sdsVKlUrWxTXM1iqGgB6zAdEaOHLm+OkzHolvU6/UOw/4CyElKSvpJLMPX19du19MVODohIzs7O8faOFRCRKanJ+77vFSHFjyPWTxPt3meGAAmkzCo5Ay+Kim8lRIo5QxSBhiNHHmrZOjYpo7/q8+3mrX/30/9/s7omOWMMYcfQf1ASY/Ypn5nRz7fetYHs3qiXcswKizWwWjiGfFmCYvMAb6Y2UqZUnmeejcZsHVK11G77Y7ZqSqWLFnykZjUU7NmTZcj+1eGkpKSOQBw4sSJfZ5qE3DsD1RZGNNHcIpCYQlQAe6eTOLv79/E+rfgelLpZElEMRzHlSv7s7Ozc6zMC6q8e+WqxLJ48WJRj/bAwMD2YumVwdEJGbZhViSWP7oN31rW/sVtCRxPzQHMUchYto9KwrwVEiaXgkklZtULL3iLG0w8lWqNUCpk6NC6tt9rQ1pNO7D6qd/jx7ZdyRiLsrTry5hXizqK5V3b1z0RP6VHywkj2kIqYVRSZgDPl8dSBpFFygE4nlbk5WvbNhmw9WhVBu8MZ86cOSIm9Xh7e9fyxHKLiOJq1KjRMS0tLeP999/3KOOBWcFsJxo72lF5BNcgZl5w9epVl2d8IoqyDYEhOOQ6XV4KTOeEtR9eXFzcUk+YFygUCtFjb2xx5syZI0lJSXYMTqlUelflewgODrbzv8vPzy8cP358Bd2VxLZQp6HbC9u/uG2JEqbmEmAGGDIBgCcw8zIM4Mj8mwEgnodWZySlXErtWob5jBzYYsrBT57+7f2JHVZGBUqeb9vM/+yrg1tPe39mT8Q0q0UFhToyGHnLKZ9ksdEhADzRbyaO79n4ua+mx7767YPa8dAtWbLkI7EP2CKpVKtxne4TAPjss8924AHoNYRt7wpQq9UP1Nzh745du3bttT0Vwc/Pb4CD4nawXV5otVrdunXrPnFWx5bpJCYmJls5/lb7valZs6arO7W6CRMmLBNbBTg7xUIMRDRQoVDYGR8KZ6hVYG52jMeCRgN3FNd/6svlZWWG5iaeJvFEVwXVLxPioxKREMOdwHgiptObSCGXUruWtbyHP9dsyrK5vb+Z868uzccMfQwMjIrLDCBYjha2hB4jRgTwHCVk3Slr13TA1uPuDLYqOHPmzJGJEyfaGcvVqFGjY3XsbohopUqlap6WlpaxZMmStdUi0gGMRmOxbZrgW/MIVUehMFGUQ/Dad2kJK5PJhlj/Pnjw4OmkpKQkR+XJfD77d1Kp1M+iRBYMAzfDAyYGRBTg4+MT6mr5ixcvfrNjxw47fVRAQEAfd5bx+fn5dpER09LSMiZNmrTUNt0h47Gg+fPbyxr0/3J1UbGhBRHGArgkSCuWbW8SzIrNMXyIoNWaCGDo3qEeYpqHobBYD6OJYxCWU+WNE4EnumDi+B6Nn/tqVq8xe/SuDrKa0G3fvn35smXL7AzpjEbjl1XRmQi7ElM8dQ6UI2RlZdn52FTXt+YRgCVLlqy1PSLa2UkcFhBRVEhISE/L7/z8/EJnJ5ASUYAQWykCALy8vFQzZswYQEQHyUMAUODm8HWvvfbae7YGqgqFwsfRaRYi44oJCgqqsMyy+hbslnKVMh4LYl7crm/Q/4sNd4sMrXjCKMbwq8BvGEP5DpQlJjJ4nkijNZJOb4TFLNEqMgWDWVe0JPNmcYemA7aecpUODyJn5syZ8bbMRy6X17VW9rkC663QdevW7XuQzo7+/v52IRuqYnfyCHbImDt37jJra14vL6/llU1COp2uXDlriY/j6ARSC9OxPp/9IULysGHDEmytmVUq1TxyIYqiRcVgjenTp3/p6FtwmfFY0OGl7aYG/b/4/NeL+W14HsOIcE7Yfmc8gRFPVsspKuc5DPfPryAitYmnbo2e/WpO7wnf/2lxQQCoxZiPVCrtQUQpld1wIgoQjLQ2AWZjr6lTp76HB+jsKBbGValURljRM+pB9f13R0pKyv64uLillo9PJpPVMBqNqxyVJ6JRKpWq3ABv3bp1+5zFx+E4bu9DynQAAKmpqVutx2+ByWT6zhkDJqJNKpWqi+W3ZfkohO0Q/xbuM4iqX1e+Hz44ff+IH9P3jyDLdXX/CP7q/hF07cAI/tr+EXTNnEZp3w9b/PXyvjJP9Ovq5QJiBg4cuDYvL6/AWmTlOK6QiDaRjd6HiGKIKF7IJ41Go01ISNgDoNItWDL7cMVrNJrbtiKyVqv9jcxRB+Mc1R86dGhrjUajFZGw400m03mdTpftpO8oIholjKkCdDpdmZA+qjKGK7QVQILzp9hYSktLfySiKeTmtrQrEO7/FCLa7WAcKwXaqrIEVUVHR0/NysqyHtMm27aE/sny/MeOHbsZTp6/2D3/I5CZmZnqiCZn409JSUm1bsdkMp0n++8gwHZceXl5BUOGDPnY2b2wVPbYdfm74c+l7xtxQmA45ktgOun7hv9yee+wzp7sz9XLRYQBmJKQkLDHlgE5w6lTp1K6du36YaU32nyv411tlxwzH9WQIUM+FmM+Wq1WM3To0AQn/bsEvV5f6dJXq9Uu9sBYqgRXOzWZTCeq2IUKwPidO3cet9xnq0loJRFdt/Rx6tSplMjIyHgAUU7oXenGvfIoqsB4LOMfOmfOnO0i30IKmd/j3ZaJl8jMfHfu3Hm8fv36c2D+lpyCkesfpsu4dmBEbwD/YmD9iUjL8ZSQfD4n4ZV3fnA5QLsnwRirvNB9xACImzNnTmyPHj0iGzZsGNaoUaMo6wJpaWkZarX6xooVK9TJycnHYQ5F6sryKk64XMFmOFZQh3Xt2nXq5MmTO8XExEQCwIkTJy4vXrw4+caNG2vheDs23sW+M4T+nSEOnhlLVRDvYrkMVD4OZ4gDEDtnzpyYnj171m3ZsqW/VCrlMzIydBcuXCj49NNPLwnPPxHOd6P6Afizdh4zUPV70BRAv7Fjx8YMGjSoSatWraLCw8PLmUpBQUHBjRs37hw5cuTy6tWr1Tdu3DgOc9D5SnfmHgjjseDqvhHvcjyf0/i5rf95YJ08IDDGmsI8i4XBfjbLEC41Ef0pZ1QLPloxuE/bJYGeP93j++8Gm3cBME8yOTDv8D7UZ5R7AoJBsO09AKzuA8z3wuV37/8BFl14jhB2WWIAAAAASUVORK5CYII="><!-- <img src="https://static.crypto20.com/images/logo_white.png" target="_blank" style="width:180px;"> --></a>
                             <br>
                             <small style="font-size:10px;color:#ddd;">
                                 <a href="https://crypto20.com/" target="_blank">Site</a>
@@ -413,7 +422,7 @@ button:hover{
                     <p>Tracked Coins/Tokens</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p></p>
                     <!-- Crypto20 -->
                     <p>
@@ -468,7 +477,7 @@ button:hover{
                     <p>Assets Under Management / Fund Size<br><small>(NAV * Total Supply)</small></p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p>
                         <!-- Cyrpto20 -->
                         ~$150 million 
@@ -536,7 +545,7 @@ button:hover{
                     <p>Fund Weightings</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p>
                         <!-- Cyrpto20 -->
                         10% max Market Cap Weighted
@@ -611,7 +620,7 @@ button:hover{
                     <p>Yearly / Exit Fees</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p>0.5% P/A</p>
 
                     <p>No exit fee</p>
@@ -683,7 +692,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Autonomous &amp; 100% Passively Managed</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
                 <td>
@@ -712,7 +721,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>100% of profits reinvested</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
                 <td>
@@ -742,7 +751,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Exchange Traded</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
                 <td>
@@ -829,7 +838,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Public&nbsp;Website&nbsp;Asset&nbsp;Distribution Chart</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
                 <td>
@@ -891,7 +900,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Disclosed Income via Stakes + Nodes + Forks</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
                     <a href="https://crypto20.com/en/portal/performance/" target="_blank"><sup>1</sup></a>
                 </td>
@@ -952,7 +961,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Simple ETH Liquidation</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
 
@@ -982,7 +991,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Financial Statements</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);">&nbsp;
                     <a href="https://static.crypto20.com/pdf/CRYPTO20-reporting-requirements.pdf" target="_blank"><sup>1</sup></a>
                 </td>
@@ -1087,7 +1096,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>Ethical, Legal, and Value Exclusions</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                 </td>
 
@@ -1117,7 +1126,7 @@ To grow capital pool without attracting additional investment, 25% of profits is
                     <p>NAV Outperformed Market Cap<br>since ICO Ended</p>
                 </td>
 
-                <td class="gold2">
+                <td class="gold">
                     <!-- Crypto 20 -->
                     <p><img src="https://image.flaticon.com/icons/svg/390/390973.svg" style="width:10px; transform:scale(2.0);"></p>
                     <a href="https://crypto20.com/en/portal/performance/" target="_blank"><sup>1</sup></a>
